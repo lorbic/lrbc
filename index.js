@@ -56,8 +56,8 @@ app.get("/:shorturl", async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 
-mongoose.connection.on("open", () => {
-  app.listen(PORT, () => {
-    console.log(`Listening on ${PORT}`);
-  });
+// mongoose.connection.on("open", () => {
+// });
+app.listen(PORT, () => {
+  console.log(`Listening on ${PORT}`);
 });
