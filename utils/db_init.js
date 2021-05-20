@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 let mongodbURI = process.env.LRBC_MONGODB_URL;
-// let mongodbURI = config.get("MONGODB_URL");
-
+console.log(mongodbURI);
 module.exports = () => {
   mongodbURI += "?retryWrites=true&w=majority&ssl=true";
   mongoose
