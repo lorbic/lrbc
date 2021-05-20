@@ -1,0 +1,30 @@
+{
+  "name": "lrbc",
+  "version": "1.0.0",
+  "description": "URL Shortner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorbic/lrbc.git"
+  },
+  "keywords": [],
+  "author": "Vikash Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lorbic/lrbc/issues"
+  },
+  "homepage": "https://github.com/lorbic/lrbc#readme",
+  "dependencies": {
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.10",
+    "shortid": "^2.2.16"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
