@@ -1,6 +1,5 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const config = require("config");
 const ShortURL = require("./models/url");
 const { app } = require("./startup");
 // initialize remote database
@@ -10,8 +9,7 @@ const db = require("./utils/db_utils");
 const { validateUrl } = require("./utils/utils");
 
 app.get("/", (req, res) => {
-  console.log("Working", req.query.longUrl);
-  res.render("index", { timestamp: Date.now() });
+  res.render("index", {});
   res.end();
 });
 
@@ -34,9 +32,9 @@ app.post("/short", async (req, res) => {
     longURL: longUrl,
   });
   await record.save();
-  const context = {
-    url: req.get("host") + "/" + record.short,
-  };
+  let url = req.get("host") + "/" + record.short;
+  url = validateUrl(url);
+  const context = { url };
   res.render("short", { context });
 });
 
@@ -55,7 +53,6 @@ app.get("/:shorturl", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-
 // mongoose.connection.on("open", () => {
 // });
 app.listen(PORT, () => {
