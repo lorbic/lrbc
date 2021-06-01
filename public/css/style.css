@@ -13,3 +13,10 @@ body {
 .url-submit-button {
   color: white;
 }
+
+nav .nav-wrapper > a{
+  position: relative;
+  display: block;
+  font-size: 1.2 em;
+
+}
