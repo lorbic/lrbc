@@ -1,3 +1,4 @@
 {
-  "MONGODB_URL": "LRBC_MONGODB_URL"
+  "MongoDBUrl": "LRBC_MONGODB_URL",
+  "AppName": "APP_NAME"
 }

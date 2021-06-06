@@ -1,4 +1,4 @@
-function validateUrl(url) {
+function generateValidUrl(url) {
   if (url.startsWith("http") || url.startsWith("https")) {
   } else {
     url = "http://" + url;
@@ -6,4 +6,4 @@ function validateUrl(url) {
   return url;
 }
 
-module.exports.validateUrl = validateUrl;
+module.exports.generateValidUrl = generateValidUrl;
