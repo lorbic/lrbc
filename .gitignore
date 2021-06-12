@@ -7,3 +7,8 @@ export.db.bat
 npm-debug.log
 .DS_Store
 /*.env
+
+
+apis/auth.js
+apis/demo.js
+middlewares/auth.js

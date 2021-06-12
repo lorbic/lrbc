@@ -4,8 +4,9 @@
   "description": "URL Shortner",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "test": "jest",
+    "start": "nodemon index.js",
+    "dev": "export.db.bat && nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -28,5 +29,9 @@
   },
   "engines": {
     "node": "16.x"
+  },
+  "devDependencies": {
+    "jest": "^27.0.4",
+    "supertest": "^6.1.3"
   }
 }

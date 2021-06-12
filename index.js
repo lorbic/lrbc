@@ -13,8 +13,6 @@ app.use("/urls", urlViewApi);
 app.use("/", urlShortnerApi);
 
 const PORT = process.env.PORT || 3000;
-// mongoose.connection.on("open", () => {
-// });
 app.listen(PORT, () => {
   console.log(`Listening on ${PORT}`);
 });
