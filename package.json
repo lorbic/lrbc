@@ -1,11 +1,11 @@
 {
   "name": "lrbc",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "URL Shortner",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "dev": "export.db.bat && nodemon index.js"
   },
   "repository": {
@@ -28,7 +28,8 @@
     "shortid": "^2.2.16"
   },
   "engines": {
-    "node": "16.x"
+    "node": "16.x",
+    "npm": "7.16.x"
   },
   "devDependencies": {
     "jest": "^27.0.4",
