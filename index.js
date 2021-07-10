@@ -16,7 +16,7 @@ app.use(auth(authConfig));
 
 // APIs
 const urlViewApi = require("./apis/url_view");
-const urlShortnerApi = require("./apis/url_shortner");
+const urlshorterApi = require("./apis/url_shorter");
 const authApi = require("./apis/auth");
 
 // Routing
@@ -24,7 +24,7 @@ app.use("/user", requiresAuth(), authApi);
 app.use("/urls", requiresAuth(), urlViewApi);
 // always keep root url to the bottom of all custom
 // routes otherwise it will map the route to a short url
-app.use("/", urlShortnerApi);
+app.use("/", urlshorterApi);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

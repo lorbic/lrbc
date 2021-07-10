@@ -1,7 +1,7 @@
 {
   "name": "lrbc",
   "version": "1.2.1",
-  "description": "URL Shortner",
+  "description": "URL shorter",
   "main": "index.js",
   "scripts": {
     "test": "jest",

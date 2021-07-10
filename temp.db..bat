@@ -4,3 +4,12 @@ set LRBC_MONGODB_USER=<YOUR_MONGO_DB_USERNAME>
 
 set LRBC_MONGODB_PASSWD=<YOUR_MONGO_DB_PASSWORD>
 
+set NODE_ENV=development
+
+set AUTH0_SECRET=<auth0 secret>
+
+set AUTH0_BASEURL=<auth0 base url>
+
+set AUTH0_CLIENTID=<auth0 client id>
+
+set AUTH0_ISSUER_BASEURL=<auth0 issuer base url>
