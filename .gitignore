@@ -9,6 +9,5 @@ npm-debug.log
 /*.env
 
 
-apis/auth.js
 apis/demo.js
 middlewares/auth.js
