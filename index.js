@@ -20,8 +20,8 @@ const urlShortnerApi = require("./apis/url_shortner");
 const authApi = require("./apis/auth");
 
 // Routing
-app.use("/user", requiresAuth, authApi);
-app.use("/urls", requiresAuth, urlViewApi);
+app.use("/user", requiresAuth(), authApi);
+app.use("/urls", requiresAuth(), urlViewApi);
 // always keep root url to the bottom of all custom
 // routes otherwise it will map the route to a short url
 app.use("/", urlShortnerApi);
