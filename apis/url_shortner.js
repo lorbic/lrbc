@@ -7,6 +7,7 @@ const db = require("../utils/db_utils");
 const { generateValidUrl } = require("../utils/utils");
 
 router.get("/", (req, res) => {
+  console.log(req.oidc.isAuthenticated() ? "AUTH0:::Logged in" : "AUTH0:::Logged out");
   res.render("index", {});
   res.end();
 });
