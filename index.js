@@ -1,5 +1,19 @@
 const { app, config } = require("./startup");
 
+const { auth } = require("express-openid-connect");
+
+const authConfig = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.AUTH0_SECRET,
+  baseURL: process.env.AUTH0_BASEURL,
+  clientID: process.env.AUTH0_CLIENTID,
+  issuerBaseURL: process.env.AUTH0_ISSUER_BASEURL,
+};
+
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+app.use(auth(authConfig));
+
 // APIs
 const urlViewApi = require("./apis/url_view");
 const urlShortnerApi = require("./apis/url_shortner");
