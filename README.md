@@ -1,6 +1,6 @@
 # lrbc
 
-URL Shortner
+URL shorter
 
 ## Setup
 
