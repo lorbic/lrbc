@@ -1,3 +1,7 @@
+:root {
+  --primary-accent-color: #f3989b;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,16 +11,14 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  /* background-color: rgb(182, 170, 154); */
 }
 
 .url-submit-button {
   color: white;
 }
 
-nav .nav-wrapper > a{
+nav .nav-wrapper > a {
   position: relative;
   display: block;
   font-size: 1.2 em;
-
 }
