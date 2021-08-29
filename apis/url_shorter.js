@@ -11,10 +11,10 @@ router.get("/", (req, res) => {
   res.end();
 });
 
-router.post("/short", async (req, res) => {
+router.post("/s", async (req, res) => {
   let longUrl = req.body.longUrl;
   let shortUrlCode = req.body.shortUrlCode;
-  longUrl = generateValidUrl(longUrl);
+  //   longUrl = generateValidUrl(longUrl);
   const URLData = {
     longURL: longUrl,
   };
@@ -24,7 +24,7 @@ router.post("/short", async (req, res) => {
   const record = new ShortURL(URLData);
   await record.save();
   let url = req.get("host") + "/" + record.short;
-  url = generateValidUrl(url);
+  //   url = generateValidUrl(url);
   const context = { url };
   res.render("short", { context });
 });
