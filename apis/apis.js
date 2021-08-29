@@ -18,7 +18,7 @@ router.get("/v1", async (req, res) => {
     if (isURL(url)) {
       // valid url
       const shortCode = await createShortUrl(url);
-      const shortURL = req.get("host") + "/" + shortCode;
+      const shortURL = generateValidUrl(req.get("host") + "/" + shortCode);
       res.status(200).send(shortURL);
       return;
     } else {
