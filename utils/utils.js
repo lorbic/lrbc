@@ -1,7 +1,7 @@
 function generateValidUrl(url) {
   if (url.startsWith("http") || url.startsWith("https")) {
   } else {
-    url = "http://" + url;
+    url = "https://" + url;
   }
   return url;
 }
