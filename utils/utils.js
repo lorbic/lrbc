@@ -1,5 +1,5 @@
 function generateValidUrl(url) {
-  if (url.startsWith("http") || url.startsWith("https")) {
+  if (url.startsWith("http") || url.startsWith("https") || url.startsWith("ftp")) {
   } else {
     url = "https://" + url;
   }
