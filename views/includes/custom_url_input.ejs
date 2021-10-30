@@ -1,19 +1,22 @@
 <div class="row center">
-    <div class="col s12">
-        <form class="row" action="/short" method="POST">
-            <div class="input-field col s12">
-                <label for="longUrl">LONG URL</label>
-                <input name="longUrl" id="longUrl" type="text">
-            </div>
-            <!-- <br> -->
-            <div class="input-field col s12">
-                <label for="shortUrlCode">SHORT URL CODE</label>
-                <input name="shortUrlCode" id="shortUrlCode" type="text">
-            </div>
-            <span class="helper-text" data-error="wrong" data-success="right">
-                Enter URL and press enter
-            </span>
-            <br>
-            <button class="btn waves-effect waves-light" type="submit" name="action">Short This!</button>
-        </form>
-    </div>
+  <div class="col s12">
+    <form class="row" action="/sc" method="POST">
+      <div class="input-field col s12">
+        <label for="longUrl">LONG URL</label>
+        <input name="longUrl" id="longUrl" type="text" required />
+      </div>
+      <!-- <br> -->
+      <div class="input-field col s12">
+        <label for="shortUrlCode">SHORT URL CODE</label>
+        <input name="shortUrlCode" id="shortUrlCode" type="text" required />
+      </div>
+      <div class="input-field col s12">
+        <label for="passcode">Security Code</label>
+        <input name="passcode" id="passcode" type="number" required />
+      </div>
+      <span class="helper-text" data-error="wrong" data-success="right"> Enter URL and press enter </span>
+      <br />
+      <button class="btn waves-effect waves-light" type="submit" name="action">Short This!</button>
+    </form>
+  </div>
+</div>
