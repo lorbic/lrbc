@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: cp -r lrbc /apps/
+      - run: cp -r * /apps/lrbc
 #     - name: Use Node.js ${{ matrix.node-version }}
 #       uses: actions/setup-node@v2
 #       with:
