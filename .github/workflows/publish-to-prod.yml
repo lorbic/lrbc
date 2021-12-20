@@ -20,7 +20,6 @@ jobs:
       - uses: actions/checkout@v2
       - run: sudo  cp -r * /apps/lrbc
       - run: sudo cp /apps/export.db.sh /apps/lrbc
-      - run: sudo source /apps/lrbc/export.db.sh
 #     - name: Use Node.js ${{ matrix.node-version }}
 #       uses: actions/setup-node@v2
 #       with:
