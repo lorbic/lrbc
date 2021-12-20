@@ -12,6 +12,7 @@ npm-debug.log
 .DS_Store
 /*.env
 
+# Non deployed, temporary code 
 apis/demo.js
 middlewares/auth.js
 middlewares
