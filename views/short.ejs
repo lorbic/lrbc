@@ -1,27 +1,25 @@
 <%- include('includes/header.ejs') -%>
 
-    <div class="container center">
-        <h4 class="center">Your Short URL</h4>
-        <h5>
-            <a id="short-url" href="<%= context.url %> " target="_blank">
-                <%= context.url %>
-            </a>
-        </h5>
-        <br>
-        <p>Copy below url</p>
-        <button class="btn waves-effect waves-light" id="short-url-copy-btn" href="javascript:void(0)">Copy URL</button>
-        <br>
-        <input class="container center" id="url-input" type="url" value="<%= context.url %>">
-    </div>
+<div class="container center">
+    <h4 class="center">Your Short URL</h4>
+    <h5>
+        <a id="short-url" href="<%= context.url %> " target="_blank"> <%= context.url %> </a>
+    </h5>
+    <br />
+    <p>Copy below url</p>
+    <button class="btn waves-effect waves-light" id="short-url-copy-btn" href="javascript:void(0)">Copy URL</button>
+    <br />
+    <input class="container center" id="url-input" type="url" value="<%= context.url %>" />
+</div>
 
-    <script>
-        let urlEle = document.querySelector("#url-input");
-        // let url = urlEle.value;
-        // console.log(url);
-        document.querySelector("#short-url-copy-btn").addEventListener('click', function () {
-            urlEle.select();
-            document.execCommand("copy");
-            alert("URL Copied");
-        });
-    </script>
-    <%- include('includes/footer.ejs') -%>
+<script>
+    let urlEle = document.querySelector("#url-input");
+    // let url = urlEle.value;
+    // console.log(url);
+    document.querySelector("#short-url-copy-btn").addEventListener("click", function () {
+        urlEle.select();
+        document.execCommand("copy");
+        alert("URL Copied");
+    });
+</script>
+<%- include('includes/footer.ejs') -%>
