@@ -13,13 +13,14 @@
 </div>
 
 <script>
-    let urlEle = document.querySelector("#url-input");
-    // let url = urlEle.value;
-    // console.log(url);
-    document.querySelector("#short-url-copy-btn").addEventListener("click", function () {
+    const urlEle = document.querySelector("#url-input");
+    const urlCopyBtn = document.querySelector("#short-url-copy-btn");
+
+    urlCopyBtn.addEventListener("click", function () {
         urlEle.select();
         document.execCommand("copy");
-        alert("URL Copied");
+        // alert("URL Copied");
+        urlCopyBtn.textContent = "URL Copied";
     });
 </script>
 <%- include('includes/footer.ejs') -%>
