@@ -15,7 +15,8 @@ const urlSchema = new mongoose.Schema({
     short: {
         type: String,
         required: true,
-        default: nanoid(),
+        unique: true,
+        default: nanoid,
     },
     clicks: {
         type: Number,
