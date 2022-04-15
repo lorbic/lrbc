@@ -1,6 +1,6 @@
 {
     "name": "lrbc",
-    "version": "1.2.2",
+    "version": "1.3.0",
     "description": "URL shorter",
     "main": "index.js",
     "scripts": {
@@ -12,7 +12,10 @@
         "type": "git",
         "url": "git+https://github.com/lorbic/lrbc.git"
     },
-    "keywords": [],
+    "keywords": [
+        "URL Shortner",
+        "lorbic"
+    ],
     "author": "Vikash Patel",
     "license": "ISC",
     "bugs": {
@@ -27,6 +30,7 @@
         "mongoose": "^5.12.10",
         "nanoid": "^3.3.1",
         "nodemon": "^2.0.14",
+        "qrcode": "^1.5.0",
         "shortid": "^2.2.16",
         "validator": "^13.6.0"
     },
