@@ -1,19 +1,23 @@
 <%- include('includes/header.ejs') -%>
 
 <div class="container center">
-    <h4 class="center">Your Short URL</h4>
-    <h5>
-        <a id="short-url" href="<%= context.url %> " target="_blank"> <%= context.url %> </a>
-    </h5>
     <br />
-    <p>Copy below url</p>
+    <p>Long URL: <span id="longurl-placeholder"><%= context.longUrl %></span></p>
+    <h5 class="center">Your Short URL</h5>
+    <br />
     <button class="btn waves-effect waves-light" id="short-url-copy-btn" href="javascript:void(0)">Copy URL</button>
     <br />
     <input class="container center" id="url-input" type="url" value="<%= context.url %>" />
+    <p class="short-url">
+        <a id="short-url" href="<%= context.url %> " target="_blank"> <%= context.url %> </a>
+    </p>
+    <div class="container center" id="qrcode"></div>
+    <br />
 </div>
-
+<script src="/public/js/qrcode.min.js"></script>
 <script>
     const urlEle = document.querySelector("#url-input");
+    const longUrlEle = document.querySelector("#longurl-placeholder");
     const urlCopyBtn = document.querySelector("#short-url-copy-btn");
 
     urlCopyBtn.addEventListener("click", function () {
@@ -21,6 +25,17 @@
         document.execCommand("copy");
         // alert("URL Copied");
         urlCopyBtn.textContent = "URL Copied";
+    });
+
+    // generate qr code
+    let qrcode = new QRCode(document.getElementById("qrcode"), {
+        // text: longUrlEle.textContent,   // QRCode for original link
+        text: urlEle.value, // QRCode for short link
+        width: 128,
+        height: 128,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H,
     });
 </script>
 <%- include('includes/footer.ejs') -%>

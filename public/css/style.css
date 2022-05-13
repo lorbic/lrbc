@@ -1,24 +1,34 @@
 :root {
-  --primary-accent-color: #ee6e73;
+    --primary-accent-color: #ee6e73;
 }
 
 * {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .url-submit-button {
-  color: white;
+    color: white;
 }
 
 nav .nav-wrapper > a {
-  position: relative;
-  display: block;
-  font-size: 1.2 em;
+    position: relative;
+    display: block;
+    font-size: 1.2 em;
+}
+
+#url-input {
+    width: fit-content;
+}
+
+#qrcode {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0px;
 }
