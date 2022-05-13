@@ -19,12 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: sudo  cp -r * /apps/lrbc
-      - run: sudo cp /apps/export.db.sh /apps/lrbc
-#     - name: Use Node.js ${{ matrix.node-version }}
-#       uses: actions/setup-node@v2
-#       with:
-#         node-version: ${{ matrix.node-version }}
-#         cache: 'npm'
-#     - run: npm ci
-#     - run: npm run build --if-present
-#     - run: npm test
+      - run: sudo cp /apps/config/* /apps/lrbc/
+
+
