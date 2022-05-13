@@ -3,16 +3,17 @@ node_modules
 # all the development only files
 .hidden/
 
-# DATABASE CONFIGURATION 
-# use 'temp.db.bat' to define environment variables 
+# DATABASE CONFIGURATION
+# use 'temp.db.bat' to define environment variables
 export.db.bat
 export.db.sh
+ecosystem.config.js
 
 npm-debug.log
 .DS_Store
 /*.env
 
-# Non deployed, temporary code 
+# Non deployed, temporary code
 apis/demo.js
 middlewares/auth.js
 middlewares
