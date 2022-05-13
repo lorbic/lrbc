@@ -34,7 +34,7 @@ router.post("/s", async (req, res) => {
     host = req.get("host");
     url = await generateAndSaveShortURL(URLData, host);
 
-    const context = { url };
+    const context = { url, longUrl };
     res.render("short", { context });
 });
 
