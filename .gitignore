@@ -12,6 +12,7 @@ ecosystem.config.js
 npm-debug.log
 .DS_Store
 /*.env
+logs
 
 # Non deployed, temporary code
 apis/demo.js
